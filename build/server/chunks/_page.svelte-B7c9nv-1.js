@@ -1,0 +1,85 @@
+import { e as escape_html } from './escaping-BQR1pbqy.js';
+import { u as push, w as pop } from './index-BfXvQ71r.js';
+
+function NavBar($$payload) {
+  $$payload.out.push(`<nav class="flex justify-between sticky top-0 z-10 items-center bg-gray-800 h-14 w-full *:text-white"><div><h2 class="text-2xl ml-3 cursor-default">Metamorphosis</h2></div> <div class="mr-4 space-x-1"><a href="https://www.amazon.com.br/Metamorphosis-Franz-Kafka/dp/0241573734"><button class="navBarButton">Order</button></a> <button class="navBarButton">About</button></div></nav>`);
+}
+function Footer($$payload, $$props) {
+  push();
+  const date = /* @__PURE__ */ new Date();
+  const year = date.getFullYear();
+  $$payload.out.push(`<footer class="md:flex md:justify-between bg-gray-800 text-white md:items-center p-3"><h3 class="text-lg text-center">©${escape_html(year)} all directs reserved.</h3> <p class="text-lg text-center">Made with ❤️ by <a class="underline" href="https://github.com/thaleskaua66">Thalison</a> from Brazil</p></footer>`);
+  pop();
+}
+function Comment($$payload, $$props) {
+  const { author = "Author", rating = "0/10", comment = "Comment" } = $$props;
+  $$payload.out.push(`<div class="inline-block mr-2 ml-2 border-2 border-gray-800 dark:bg-gray-800 dark:border-gray-700 rounded-3xl p-5 space-y-3 bg-gray-200 w-80 h-100 overflow-hidden"><div class="flex flex-col justify-between h-full"><div class="space-y-2"><h2 class="text-3xl">${escape_html(rating)}</h2> <p class="text-md whitespace-normal">"${escape_html(comment)}"</p></div> <p class="text-end">- <cite>${escape_html(author)}</cite></p></div></div>`);
+}
+function _page($$payload) {
+  NavBar($$payload);
+  $$payload.out.push(`<!----> <div class="flex flex-col md:flex-row p-5 md:p-10 justify-between"><div class="flex flex-col items-center justify-center p-2 *:font-[Arial,_sans-serif] space-y-2 md:w-150"><h1 class="text-4xl">The Metamorphosis</h1> <p>A book by <cite>Franz Kafka</cite></p> <img class="w-80" src="./book.png" alt="The Metamorphosis Cover"/></div> <div class="flex flex-col items-center justify-center space-y-5"><h2 class="text-4xl md:mt-0 mt-5">Sinopsis</h2> <p class="max-w-[50ch] md:max-w-[80ch] text-center">"The Metamorphosis" by Franz Kafka tells the story of Gregor Samsa, a traveling salesman, who wakes up one morning transformed into a large insect. The novella explores themes of alienation, isolation, and the absurd as Gregor struggles to adjust to his new form and his family grapples with the change. Gregor's metamorphosis leads to his isolation from his family and society, highlighting his pre-existing detachment and the impact of his transformation on those around him</p> <div class="flex gap-2"><script>
+        async function download(filepath) {
+          const response = await fetch(filepath);
+          const blob = await response.blob();
+
+          const link = document.createElement("a");
+          link.href = URL.createObjectURL(blob);
+          link.download = "metamorphosis.pdf";
+          link.click()
+          URL.revokeObjectURL(link.href);
+        }
+      <\/script> <a href="./Metamorphosis.pdf"><button class="border-2 border-gray-800 w-32 h-12 rounded-lg hover:bg-gray-800 hover:text-white active:bg-gray-800 active:text-white transition-all duration-300 cursor-pointer">Read Now</button></a> <button class="border-2 border-gray-800 w-32 h-12 rounded-lg hover:bg-gray-800 hover:text-white active:bg-gray-800 active:text-white transition-all duration-300 cursor-pointer">Download</button></div></div></div> <div class="group overflow-hidden py-6 whitespace-nowrap"><div class="flex w-max"><div class="flex applySlide space-x-8 group-active:[animation-play-state:paused]">`);
+  Comment($$payload, {
+    author: "RiddellReads",
+    rating: "10/10",
+    comment: "Kafka’s consistent use of self‑insert narrators whose guilt manifests around them rather than within them... We know that Kafka struggled with a terrible self‑image... Both die in submission after exhausting all attempts at communicating. The punishment which he deserves... I would recommend The Metamorphosis as an introduction to Kafka – it feels more accessible to me..."
+  });
+  $$payload.out.push(`<!----> `);
+  Comment($$payload, {
+    author: "Carlton Fletcher",
+    rating: "7/10",
+    comment: "Samsa’s room—and the door which he is terribly glad he locked—represent a sort of symbolic barrier throughout the book. Samsa is feared amongst all and simply withers his existence away... Kafka writes about it as if it were an odd mishap, illustrating... how Kafka began to know alienation as a fundamental component of himself and his relationships. I highly recommend this story…"
+  });
+  $$payload.out.push(`<!----> `);
+  Comment($$payload, {
+    author: "Lucas Rodrigues",
+    rating: "10/10",
+    comment: "'The Metamorphosis', by Franz Kafka, is a landmark work that continues to captivate readers and critics with its unsettling exploration of the human condition. Written in November 1912 and published in 1915, it is one of the few texts released during Kafka’s lifetime. The story of Gregor Samsa, who wakes up transformed into a monstrous insect, goes beyond its strange premise to explore universal and timeless themes."
+  });
+  $$payload.out.push(`<!----> `);
+  Comment($$payload, {
+    author: "Carlos Teixeira",
+    rating: "8/10",
+    comment: "Kafka was a deeply empathetic writer, remembered as kind and sensitive to human suffering. Letter to His Father struck me most, reflecting my own teenage struggles. His care for a little girl in one story reminds us that children need encouragement—our responses shape their confidence and growth."
+  });
+  $$payload.out.push(`<!----></div> <div class="flex applySlide space-x-8 group-active:[animation-play-state:paused]">`);
+  Comment($$payload, {
+    author: "RiddellReads",
+    rating: "10/10",
+    comment: "Kafka’s consistent use of self‑insert narrators whose guilt manifests around them rather than within them... We know that Kafka struggled with a terrible self‑image... Both die in submission after exhausting all attempts at communicating. The punishment which he deserves... I would recommend The Metamorphosis as an introduction to Kafka – it feels more accessible to me..."
+  });
+  $$payload.out.push(`<!----> `);
+  Comment($$payload, {
+    author: "Carlton Fletcher",
+    rating: "7/10",
+    comment: "Samsa’s room—and the door which he is terribly glad he locked—represent a sort of symbolic barrier throughout the book. Samsa is feared amongst all and simply withers his existence away... Kafka writes about it as if it were an odd mishap, illustrating... how Kafka began to know alienation as a fundamental component of himself and his relationships. I highly recommend this story…"
+  });
+  $$payload.out.push(`<!----> `);
+  Comment($$payload, {
+    author: "Lucas Rodrigues",
+    rating: "10/10",
+    comment: "'The Metamorphosis', by Franz Kafka, is a landmark work that continues to captivate readers and critics with its unsettling exploration of the human condition. Written in November 1912 and published in 1915, it is one of the few texts released during Kafka’s lifetime. The story of Gregor Samsa, who wakes up transformed into a monstrous insect, goes beyond its strange premise to explore universal and timeless themes."
+  });
+  $$payload.out.push(`<!----> `);
+  Comment($$payload, {
+    author: "Carlos Teixeira",
+    rating: "8/10",
+    comment: "Kafka was a deeply empathetic writer, remembered as kind and sensitive to human suffering. Letter to His Father struck me most, reflecting my own teenage struggles. His care for a little girl in one story reminds us that children need encouragement—our responses shape their confidence and growth."
+  });
+  $$payload.out.push(`<!----></div></div></div> `);
+  Footer($$payload);
+  $$payload.out.push(`<!---->`);
+}
+
+export { _page as default };
+//# sourceMappingURL=_page.svelte-B7c9nv-1.js.map
